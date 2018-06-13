@@ -1,0 +1,24 @@
+.layout {
+  .layout__region--content {
+    @include default-region;
+  }
+
+  .layout__region--first {
+    background: $lightsilver;
+    padding: 4em;
+
+    .field--name-field-links a {
+      text-decoration: underline;
+    }
+  }
+
+  .layout__region--second {
+    @include default-region;
+    padding: 4em;
+  }
+}
+
+// Cannot target single id since it is used in full page width containers.
+#block-hy-rd-content article {
+  @include default-region;
+}

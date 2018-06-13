@@ -1,0 +1,9 @@
+uuid: b2bd8c29-fa06-428f-a9e0-d316486912eb
+langcode: en
+status: true
+dependencies: {  }
+name: Taxonomy
+vid: taxonomy
+description: ''
+hierarchy: 0
+weight: 0
