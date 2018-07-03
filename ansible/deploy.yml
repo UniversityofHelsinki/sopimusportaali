@@ -9,7 +9,7 @@
     - name: "Get code from Github ({{ git_branch }} branch)"
       local_action:
         module: git
-        repo: "git@github.com:UniversityofHelsinki/ResearchDataServiceChannel.git"
+        repo: "git@github.com:UniversityofHelsinki/sopimusportaali.git"
         dest: "{{ deploy_folder }}"
         version: "{{ git_branch }}"
         force: yes
