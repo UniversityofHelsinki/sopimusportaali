@@ -11,9 +11,9 @@
   version: 3.5.0
 - src: geerlingguy.php-mysql
   version: 2.0.1
-- src: geerlingguy.php-pecl
+- src: geerlingguy.php_pecl
   version: 1.4.0
-- src: geerlingguy.php-versions
+- src: geerlingguy.php_versions
   version: 2.0.0
 - src: geerlingguy.repo-epel
   version: 1.2.2

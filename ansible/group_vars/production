@@ -14,7 +14,7 @@ projects:
     root: "{{ projects_root }}/sopimusportaali"
     public_root: "{{ projects_root }}/sopimusportaali/public"
     hosts:
-      - sopimusneuvonta-prod-18.it
+      - sopimusneuvonta-prod-18
     #key: "/etc/pki/tls/private/datasupport.helsinki.fi.key"
     #crt: "/etc/pki/tls/certs/datasupport.helsinki.fi.crt"
 
