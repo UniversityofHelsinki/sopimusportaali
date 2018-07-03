@@ -1,4 +1,4 @@
-app-server-1 ansible_host=sopimusneuvonta-test-18.it
+app-server-1 ansible_host=sopimusneuvonta-test-18
 
 [app_servers]
 app-server-1
