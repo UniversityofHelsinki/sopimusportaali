@@ -4,8 +4,8 @@
 #
 
 secrets: /root/ansible
-project_env: production
-git_branch: master
+project_env: testing
+git_branch: dev
 
 projects_root: /data
 
@@ -14,7 +14,7 @@ projects:
     root: "{{ projects_root }}/sopimusportaali"
     public_root: "{{ projects_root }}/sopimusportaali/public"
     hosts:
-      - sopimusneuvonta-prod-18.it
+      - sopimusneuvonta-test-18.it
     #key: "/etc/pki/tls/private/datasupport.helsinki.fi.key"
     #crt: "/etc/pki/tls/certs/datasupport.helsinki.fi.crt"
 

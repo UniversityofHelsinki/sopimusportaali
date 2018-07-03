@@ -1,4 +1,4 @@
-app-server-1 ansible_host=datasupport.helsinki.fi
+app-server-1 ansible_host=sopimusneuvonta-prod-18.it
 
 [app_servers]
 app-server-1
