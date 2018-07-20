@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.services.body
     - field.field.node.services.field_category
+    - field.field.node.services.field_confidentiality
     - field.field.node.services.field_description
     - field.field.node.services.field_efecte_id
     - field.field.node.services.field_guide_link
@@ -44,6 +45,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_confidentiality:
+    weight: 28
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_description:
     weight: 14
