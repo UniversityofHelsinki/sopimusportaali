@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.services.body
-    - field.field.node.services.field_costs
+    - field.field.node.services.field_category
     - field.field.node.services.field_description
     - field.field.node.services.field_efecte_id
     - field.field.node.services.field_guide_link
@@ -130,7 +130,7 @@ content:
     type: text_trimmed
     region: first
 hidden:
-  field_costs: true
+  field_category: true
   field_efecte_id: true
   langcode: true
   links: true
