@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.services.body
     - field.field.node.services.field_category
+    - field.field.node.services.field_confidentiality
     - field.field.node.services.field_description
     - field.field.node.services.field_efecte_id
     - field.field.node.services.field_guide_link
@@ -37,6 +38,16 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_confidentiality:
+    weight: 111
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_description:
     weight: 108
