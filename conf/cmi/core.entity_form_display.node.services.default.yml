@@ -5,15 +5,12 @@ dependencies:
   config:
     - field.field.node.services.body
     - field.field.node.services.field_category
-    - field.field.node.services.field_costs
     - field.field.node.services.field_description
     - field.field.node.services.field_efecte_id
     - field.field.node.services.field_guide_link
     - field.field.node.services.field_how_to_access
     - field.field.node.services.field_image
     - field.field.node.services.field_links
-    - field.field.node.services.field_size
-    - field.field.node.services.field_taxonomy
     - field.field.node.services.field_who_is_this_for
     - image.style.thumbnail
     - node.type.services
@@ -47,14 +44,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
-    region: content
-  field_costs:
-    weight: 10
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
     region: content
   field_description:
     weight: 14
@@ -102,18 +91,6 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
-    region: content
-  field_size:
-    weight: 28
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
-  field_taxonomy:
-    weight: 29
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
     region: content
   field_who_is_this_for:
     weight: 8
