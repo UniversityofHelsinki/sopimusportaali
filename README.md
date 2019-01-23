@@ -2,9 +2,9 @@
 
 ## Branches linked to environments
 
-Env | Branch | Drush alias | URL
---- | ------ | ----------- | ---
-testing | ? | ? | http://sopimusneuvonta-test.it.helsinki.fi/
+Env | Branch | Drush alias | URL | Comment
+--- | ------ | ----------- | --- | -------
+testing | ? | ? | http://sopimusneuvonta-test.it.helsinki.fi/ | Needs access to the Helsinki University's internal network.
 
 ## About the site
 
