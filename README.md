@@ -1,5 +1,11 @@
 # Druid Drupal 8 project template
 
+## Branches linked to environments
+
+Env | Branch | Drush alias | URL
+--- | ------ | ----------- | ---
+testing | ? | ? | http://sopimusneuvonta-test.it.helsinki.fi/
+
 ## About the site
 
 - Configuration is in `conf` folder
