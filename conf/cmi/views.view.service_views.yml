@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_description
     - node.type.services
     - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.yritysyhteistyo
   module:
     - better_exposed_filters
     - node
@@ -59,8 +60,25 @@ display:
               allow_secondary: false
               secondary_label: 'Advanced options'
               autosubmit: true
+              autosubmit_exclude_textfield: false
               autosubmit_hide: true
             field_category_target_id:
+              bef_format: bef
+              more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+            field_example_taxonomy_target_id:
+              bef_format: bef
+              more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+            field_yritysyhteistyo_target_id:
               bef_format: bef
               more_options:
                 bef_select_all_none: false
@@ -226,7 +244,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "  <div class=\"textarea-infobox\">\n    <h4 class=\"box-story__title\">\n      {{ title }} \n    </h4>\n      {{ field_description }} \n     <a href=\"{{ view_node }}\" class=\"button--action icon--arrow-right theme-transparent\">\n      Click for more info\n    </a>\n  </div>"
+            text: "  <div class=\"textarea-infobox\">\n    <h4 class=\"box-story__title\">\n      {{ title }} \n    </h4>\n      {{ field_description }} \n     <a href=\"{{ view_node }}\" class=\"button--action icon--arrow-right theme-transparent\">\n      Lisätietoja\n    </a>\n  </div>"
             make_link: false
             path: ''
             absolute: false
@@ -284,8 +302,39 @@ display:
           id: type
           table: node_field_data
           field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
             services: services
+          group: 1
+          exposed: false
+          expose:
+            operator_id: type_op
+            label: 'Content type'
+            description: null
+            use_operator: false
+            operator: type_op
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -302,14 +351,14 @@ display:
           exposed: true
           expose:
             operator_id: field_category_target_id_op
-            label: Category
+            label: Lakiasiat
             description: ''
             use_operator: false
             operator: field_category_target_id_op
             identifier: field_category_target_id
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -334,6 +383,51 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
+        field_yritysyhteistyo_target_id:
+          id: field_yritysyhteistyo_target_id
+          table: node__field_yritysyhteistyo
+          field: field_yritysyhteistyo_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_yritysyhteistyo_target_id_op
+            label: Yritysyhteistyö
+            description: ''
+            use_operator: false
+            operator: field_yritysyhteistyo_target_id_op
+            identifier: field_yritysyhteistyo_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: yritysyhteistyo
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts: {  }
       header:
         area:
@@ -346,7 +440,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<h2>Contracts list</h2>\n<p>Here you can browse & search all the contracks we provide.</p>"
+            value: "<h2>Tutkimuksen lakipalvelut</h2>\n<p>Täältä saat tietoa lakipalveluiden tarjoamista tukipalveluista yliopistotutkimukseen liittyen.</p>"
             format: basic_html
           plugin_id: text
       footer: {  }

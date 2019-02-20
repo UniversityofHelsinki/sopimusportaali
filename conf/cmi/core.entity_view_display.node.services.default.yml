@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.services.field_confidentiality
     - field.field.node.services.field_description
     - field.field.node.services.field_efecte_id
+    - field.field.node.services.field_example_taxonomy
     - field.field.node.services.field_guide_link
     - field.field.node.services.field_how_to_access
     - field.field.node.services.field_image
     - field.field.node.services.field_links
     - field.field.node.services.field_who_is_this_for
+    - field.field.node.services.field_yritysyhteistyo
     - node.type.services
   module:
     - image
@@ -65,6 +67,14 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_example_taxonomy:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_guide_link:
     weight: 109
     label: above
@@ -111,6 +121,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_yritysyhteistyo:
+    weight: 113
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 100

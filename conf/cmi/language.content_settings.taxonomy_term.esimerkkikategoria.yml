@@ -1,0 +1,11 @@
+uuid: a679b1c8-0463-4cd9-aa91-40d9a4b0f9a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.esimerkkikategoria
+id: taxonomy_term.esimerkkikategoria
+target_entity_type_id: taxonomy_term
+target_bundle: esimerkkikategoria
+default_langcode: site_default
+language_alterable: false

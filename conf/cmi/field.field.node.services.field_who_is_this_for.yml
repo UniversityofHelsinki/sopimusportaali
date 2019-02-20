@@ -11,7 +11,7 @@ id: node.services.field_who_is_this_for
 field_name: field_who_is_this_for
 entity_type: node
 bundle: services
-label: 'Who is this for'
+label: 'Kenelle tämä on tarkoitettu?'
 description: ''
 required: false
 translatable: false

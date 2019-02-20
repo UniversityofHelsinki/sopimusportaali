@@ -1,4 +1,3 @@
-uuid: e14b8ecb-bcce-4186-b426-5c18a9f127ce
 langcode: en
 status: open
 dependencies:
@@ -6,13 +5,15 @@ dependencies:
     - hy_esb
 open: null
 close: null
+weight: 0
 uid: 1
 template: false
+archive: false
 id: service_order_form
 title: 'Service order form'
 description: ''
 category: ''
-elements: "webform_container:\n  '#type': container\n  '#attributes':\n    class:\n      - row\n  webform_container_top:\n    '#type': container\n    '#attributes':\n      class:\n        - col-sm-12\n    webform_text:\n      '#type': webform_markup\n      '#markup': '<p><strong>You are about to submit an order. Please check your information and provide additional information when applicable.</strong></p>'\n  layout__region__first:\n    '#type': container\n    '#attributes':\n      class:\n        - col-sm-6\n    intended_use_of_service:\n      '#type': textfield\n      '#title': 'Intended use of service?'\n    when_do_you_need_the_service:\n      '#type': textfield\n      '#title': 'When do you need the service'\n    who_will_pay_for_this:\n      '#type': textfield\n      '#title': 'Who will pay for this?'\n    additional_information:\n      '#type': textarea\n      '#title': 'Additional information?'\n    service:\n      '#type': entity_autocomplete\n      '#title': Service\n      '#default_value': '[current-page:query:ordered_service]'\n      '#disabled': true\n      '#required': true\n      '#target_type': node\n      '#selection_handler': 'default:node'\n      '#selection_settings':\n        target_bundles:\n          services: services\n  layout__region__second:\n    '#type': container\n    '#attributes':\n      class:\n        - col-sm-6\n    webform_user_information:\n      '#type': processed_text\n      '#text': \"<h4>YOUR INFORMATION</h4>\\r\\n\"\n      '#format': full_html\n    name:\n      '#type': hidden\n      '#title': Name\n      '#value': name\n    email:\n      '#type': hidden\n      '#title': Email\n      '#value': email\n    group:\n      '#type': hidden\n      '#title': Group\n      '#value': group\n    user:\n      '#type': hidden\n      '#title': User\n      '#value': user\n"
+elements: "webform_container:\n  '#type': container\n  '#attributes':\n    class:\n      - row\n  webform_container_top:\n    '#type': container\n    '#attributes':\n      class:\n        - col-sm-12\n    webform_text:\n      '#type': webform_markup\n      '#markup': '<p><strong>You are about to submit an order. Please check your information and provide additional information when applicable.</strong></p>'\n  layout__region__first:\n    '#type': container\n    '#attributes':\n      class:\n        - col-sm-6\n    intended_use_of_service:\n      '#type': textfield\n      '#title': 'Intended use of service?'\n    when_do_you_need_the_service:\n      '#type': textfield\n      '#title': 'When do you need the service'\n    who_will_pay_for_this:\n      '#type': textfield\n      '#title': 'Who will pay for this?'\n    additional_information:\n      '#type': textarea\n      '#title': 'Additional information?'\n    service:\n      '#type': entity_autocomplete\n      '#title': Service\n      '#default_value': '[current-page:query:ordered_service]'\n      '#disabled': true\n      '#required': true\n      '#target_type': node\n      '#selection_handler': 'default:node'\n      '#selection_settings':\n        target_bundles:\n          services: services\n  layout__region__second:\n    '#type': container\n    '#attributes':\n      class:\n        - col-sm-6\n    webform_user_information:\n      '#type': processed_text\n      '#text': \"<h4>YOUR INFORMATION</h4>\\r\\n\"\n      '#format': full_html\n    name:\n      '#type': hidden\n      '#title': Name\n      '#default_value': name\n    email:\n      '#type': hidden\n      '#title': Email\n      '#default_value': email\n    group:\n      '#type': hidden\n      '#title': Group\n      '#default_value': group\n    user:\n      '#type': hidden\n      '#title': User\n      '#default_value': user\n"
 css: ''
 javascript: ''
 settings:
@@ -21,6 +22,7 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -28,6 +30,7 @@ settings:
   form_previous_submissions: false
   form_confidential: false
   form_confidential_message: ''
+  form_remote_addr: true
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -36,18 +39,45 @@ settings:
   form_reset: false
   form_disable_autocomplete: false
   form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
   form_unsaved: false
   form_disable_back: false
+  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
   submission_label: ''
   submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
   submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
   wizard_progress_bar: false
   wizard_progress_pages: false
   wizard_progress_percentage: false
+  wizard_progress_link: false
   wizard_start_label: ''
-  wizard_confirmation: true
+  wizard_preview_link: false
+  wizard_confirmation: false
   wizard_confirmation_label: ''
   wizard_track: ''
   preview: 0
@@ -57,6 +87,7 @@ settings:
   preview_attributes: {  }
   preview_excluded_elements: {  }
   preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
   draft: none
   draft_multiple: false
   draft_auto_save: false
@@ -72,19 +103,25 @@ settings:
   confirmation_back_attributes:
     class:
       - button
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
   limit_total: null
+  limit_total_interval: null
   limit_total_message: ''
+  limit_total_unique: false
   limit_user: null
+  limit_user_interval: null
   limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
   purge: none
   purge_days: null
-  entity_limit_total: null
-  entity_limit_user: null
   results_disabled: false
   results_disabled_ignore: false
   token_update: false
-  wizard_comfirmation: false
-  wizard_comfirmation_label: ''
 access:
   create:
     roles:
@@ -119,6 +156,18 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
 handlers:
   service_handler:
     id: hy_esb_webform_handler
@@ -128,3 +177,4 @@ handlers:
     conditions: {  }
     weight: 0
     settings: {  }
+uuid: e14b8ecb-bcce-4186-b426-5c18a9f127ce

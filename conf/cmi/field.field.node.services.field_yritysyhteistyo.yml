@@ -1,0 +1,29 @@
+uuid: bbe570f5-b9c0-424c-946e-95524b7cfc33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yritysyhteistyo
+    - node.type.services
+    - taxonomy.vocabulary.yritysyhteistyo
+id: node.services.field_yritysyhteistyo
+field_name: field_yritysyhteistyo
+entity_type: node
+bundle: services
+label: Yritysyhteistyö
+description: 'Valitse, minkälaista yrityshommaa on.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      yritysyhteistyo: yritysyhteistyo
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

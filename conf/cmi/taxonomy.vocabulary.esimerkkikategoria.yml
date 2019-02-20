@@ -1,0 +1,9 @@
+uuid: 7bef4e5a-94b1-4e84-9e4a-ded212ef181d
+langcode: en
+status: true
+dependencies: {  }
+name: Sopimukset
+vid: esimerkkikategoria
+description: ''
+hierarchy: 0
+weight: -7

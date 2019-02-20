@@ -1,0 +1,11 @@
+uuid: 7853aa02-188e-4439-9229-0d16bdcd7102
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.yritysyhteistyo
+id: taxonomy_term.yritysyhteistyo
+target_entity_type_id: taxonomy_term
+target_bundle: yritysyhteistyo
+default_langcode: site_default
+language_alterable: false

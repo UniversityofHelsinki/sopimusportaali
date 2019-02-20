@@ -1,0 +1,9 @@
+uuid: d5b2a56d-e686-412e-8db1-e0af19c89836
+langcode: en
+status: true
+dependencies: {  }
+name: Yritysyhteistyö
+vid: yritysyhteistyo
+description: ''
+hierarchy: 0
+weight: -6

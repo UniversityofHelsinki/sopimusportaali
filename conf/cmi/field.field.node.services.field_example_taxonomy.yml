@@ -1,0 +1,29 @@
+uuid: 28f15710-167e-494a-9776-722a8d6991ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_example_taxonomy
+    - node.type.services
+    - taxonomy.vocabulary.esimerkkikategoria
+id: node.services.field_example_taxonomy
+field_name: field_example_taxonomy
+entity_type: node
+bundle: services
+label: 'Example taxonomy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      esimerkkikategoria: esimerkkikategoria
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

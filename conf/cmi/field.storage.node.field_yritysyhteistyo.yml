@@ -1,0 +1,20 @@
+uuid: d53cf753-1142-4c79-b4f6-816792dbfa91
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_yritysyhteistyo
+field_name: field_yritysyhteistyo
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
