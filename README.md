@@ -4,7 +4,7 @@
 
 Env | Branch | Drush alias | URL | Comment
 --- | ------ | ----------- | --- | -------
-testing | ? | ? | http://sopimusneuvonta-test.it.helsinki.fi/ | Needs access to the Helsinki University's internal network.
+testing | dev | ? | http://sopimusneuvonta-test.it.helsinki.fi/ | Needs access to the Helsinki University's internal network.
 
 ## About the site
 
